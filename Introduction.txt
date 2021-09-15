@@ -32,5 +32,9 @@ Different ways of data access in C# are:
 - Entity Framework Core
 
 
-## Local DB
+## Local DB (SQL Server)
 SQL server version that is tiny and used for development.
+
+## SQLite 
+It is a file type database.
+It is portable.

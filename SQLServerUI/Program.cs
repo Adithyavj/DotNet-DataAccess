@@ -15,9 +15,9 @@ namespace SQLServerUI
             //ReadContact(sql, 1);
             //CreateNewContact(sql);            
             //UpdateContact(sql);
-            RemoveContact(sql, 1, 1);
+            //RemoveContact(sql, 1, 1);
 
-            Console.WriteLine("Done processing!");
+            Console.WriteLine("Done processing SQL Server!");
             Console.ReadLine();
         }
 
