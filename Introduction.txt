@@ -1,0 +1,32 @@
+Data Access in C#
+
+## Basic Normalisation:
+Normalization is the process of reducing or eliminating
+redundant data in your database which also improves
+data integrity.
+
+There are 5 levels of normalization:
+- 1NF
+- 2NF
+- 3NF
+
+Surrogate Key - Primary key (auto incremented and unique)
+Normal Key - Natural key (unique by default (business logic))
+
+One to One
+One to Many relation
+Many to Many
+
+## ORM (Object Relational Mapper)
+- Takes data from Database and converts it into c# objects.
+- ADO.NET
+	- Helps to take data from DB to Code. ## Then we have to do ORM and model the data.
+- There are many ORM tools.
+- Dapper is a tool provided by Stack Overflow. It is a Micro ORM.
+- Dapper is almost as fast as ADO.NET and we don't have to do the mapping from DataTables to our objects.
+- Entity Framework is another tool for ORM. Provided by Microsoft.
+
+Different ways of data access in C# are:
+- ADO.NET
+- Dapper
+- Entity Framework Core
