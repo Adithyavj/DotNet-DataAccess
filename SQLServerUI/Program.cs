@@ -13,9 +13,28 @@ namespace SQLServerUI
             SqlCrud sql = new SqlCrud(GetConnectionString());
             //ReadAllContacts(sql);
             //ReadContact(sql, 1);
-            CreateNewContact(sql);            
+            //CreateNewContact(sql);            
+            //UpdateContact(sql);
+            RemoveContact(sql, 1, 1);
 
+            Console.WriteLine("Done processing!");
             Console.ReadLine();
+        }
+
+        private static void RemoveContact(SqlCrud sql,int contactId,int phoneNumberId)
+        {
+            sql.RemovePhoneNumberFromContact(contactId, phoneNumberId);
+        }
+
+        private static void UpdateContact(SqlCrud sql)
+        {
+            BasicContactModel user = new BasicContactModel
+            {
+                Id = 1,
+                FirstName = "Adithya",
+                LastName = "Vijay K"
+            };
+            sql.UpdateContactName(user);
         }
 
         private static void CreateNewContact(SqlCrud sql)
