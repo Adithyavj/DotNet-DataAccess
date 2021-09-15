@@ -30,3 +30,7 @@ Different ways of data access in C# are:
 - ADO.NET
 - Dapper
 - Entity Framework Core
+
+
+## Local DB
+SQL server version that is tiny and used for development.
