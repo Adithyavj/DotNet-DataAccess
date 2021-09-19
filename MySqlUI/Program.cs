@@ -1,4 +1,5 @@
-﻿using DataAccessLibrary.Models;
+﻿using DataAccessLibrary;
+using DataAccessLibrary.Models;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
@@ -10,7 +11,7 @@ namespace MySqlUI
         static void Main(string[] args)
         {
 
-            SqliteCrud sql = new SqliteCrud(GetConnectionString());
+            MySqlCrud sql = new MySqlCrud(GetConnectionString());
             //ReadAllContacts(sql);
             //ReadContact(sql, 2);
             //CreateNewContact(sql);            
@@ -21,12 +22,12 @@ namespace MySqlUI
             Console.ReadLine();
         }
 
-        private static void RemoveContact(SqliteCrud sql, int contactId, int phoneNumberId)
+        private static void RemoveContact(MySqlCrud sql, int contactId, int phoneNumberId)
         {
             sql.RemovePhoneNumberFromContact(contactId, phoneNumberId);
         }
 
-        private static void UpdateContact(SqliteCrud sql)
+        private static void UpdateContact(MySqlCrud sql)
         {
             BasicContactModel user = new BasicContactModel
             {
@@ -37,7 +38,7 @@ namespace MySqlUI
             sql.UpdateContactName(user);
         }
 
-        private static void CreateNewContact(SqliteCrud sql)
+        private static void CreateNewContact(MySqlCrud sql)
         {
             FullContactModel user = new FullContactModel
             {
@@ -58,7 +59,7 @@ namespace MySqlUI
 
         }
 
-        private static void ReadAllContacts(SqliteCrud sql)
+        private static void ReadAllContacts(MySqlCrud sql)
         {
             var rows = sql.GetAllContacts();
             foreach (var row in rows)
@@ -67,7 +68,7 @@ namespace MySqlUI
             }
         }
 
-        private static void ReadContact(SqliteCrud sql, int contactId)
+        private static void ReadContact(MySqlCrud sql, int contactId)
         {
             var contact = sql.GetFullContactById(contactId);
 
