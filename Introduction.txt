@@ -38,3 +38,10 @@ SQL server version that is tiny and used for development.
 ## SQLite 
 It is a file type database.
 It is portable.
+
+
+# NoSQL Concepts:
+The idea behind NoSQL is that a normalized data structure is not the only way to store data.
+NoSQL tries to fit the database into the existing structure rather than forcing the situation to fit into the database structure.
+Uses document structures. JSON objects.(technically it is BSON-binary javascript object notation)
+eg:- MongoDB(document), Redis(Key-value stores), Cassandra(Wide-column stores), Neo4J(Graph database), CosmosDB
